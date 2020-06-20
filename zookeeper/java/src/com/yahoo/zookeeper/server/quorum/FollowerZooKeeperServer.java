@@ -63,6 +63,7 @@ class FollowerZooKeeperServer extends ZooKeeperServer {
         sessionTracker = new FollowerSessionTracker(this, sessionsWithTimeouts);
     }
 
+
     protected void setupRequestProcessors() {
         RequestProcessor finalProcessor = new FinalRequestProcessor(this);
         commitProcessor = new CommitProcessor(finalProcessor);
